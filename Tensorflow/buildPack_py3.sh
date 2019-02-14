@@ -5,6 +5,7 @@ dev_install () {
     wget \
     gcc \
     gcc-c++ \
+    python36 \
     python36-devel \
     python36-virtualenv \
     python36-pip \
@@ -19,8 +20,8 @@ pip_rasterio () {
     python3 -m virtualenv env --python=python3
     source env/bin/activate
     pip install -U pip wheel
-    pip install --use-wheel numpy -U
-    pip install --use-wheel tensorflow -U
+    pip install -U numpy
+    pip install -U tensorflow
     deactivate
 }
 
